@@ -1,0 +1,21 @@
+{
+  "name": "CBD Email Lists",
+  "short_name": "CBD Lists",
+  "description": "Audience data and opt-in lead lists for CBD brands, hemp companies, and wellness marketers.",
+  "start_url": "/home",
+  "display": "browser",
+  "background_color": "#142220",
+  "theme_color": "#142220",
+  "icons": [
+    {
+      "src": "/favicon.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "/apple-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+}

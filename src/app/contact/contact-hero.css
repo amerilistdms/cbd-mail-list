@@ -1,0 +1,171 @@
+/* Contact full-viewport dark hero */
+
+.contact-hero {
+  position: relative;
+  min-height: var(--hero-min-height, 100svh);
+  min-height: 100dvh;
+  overflow: hidden;
+  background: #0b1615;
+  color: #f1f5f0;
+  padding-top: 5rem;
+}
+
+.contact-hero__aurora {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.contact-hero__stripes {
+  --band: rgba(241, 245, 240, 0.08);
+  --rainbow: repeating-linear-gradient(
+    108deg,
+    #0b1615 0%,
+    #12201e 6%,
+    #0f7c7a 11%,
+    #183330 16%,
+    #4f7d48 21%,
+    #0f1c1a 27%,
+    #0f7c7a 32%,
+    #0b1615 38%
+  );
+  --stripes: repeating-linear-gradient(
+    108deg,
+    var(--band) 0%,
+    var(--band) 5%,
+    transparent 8%,
+    transparent 11%,
+    var(--band) 14%
+  );
+
+  position: absolute;
+  inset: -8%;
+  width: 116%;
+  height: 116%;
+  background-image: var(--stripes), var(--rainbow);
+  background-size: 220% 220%, 160% 160%;
+  background-position: 50% 40%, 55% 35%;
+  filter: blur(14px) saturate(1.2);
+  mask-image: radial-gradient(ellipse 95% 80% at 50% 30%, black 35%, transparent 78%);
+}
+
+.contact-hero__stripes::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: var(--stripes), var(--rainbow);
+  background-size: 180% 180%, 120% 120%;
+  background-position: 35% 55%, 45% 50%;
+  mix-blend-mode: soft-light;
+  opacity: 0.55;
+  filter: blur(8px);
+}
+
+.contact-hero__texture {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0.4;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size: 180px 180px;
+}
+
+.contact-hero__scrim {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(11, 22, 21, 0.82) 0%,
+      rgba(11, 22, 21, 0.35) 40%,
+      rgba(11, 22, 21, 0.55) 100%
+    ),
+    linear-gradient(100deg, rgba(11, 22, 21, 0.7) 0%, rgba(11, 22, 21, 0.25) 55%, transparent 100%);
+}
+
+.contact-hero__glow {
+  position: absolute;
+  z-index: 1;
+  pointer-events: none;
+  border-radius: 999px;
+  filter: blur(70px);
+}
+
+.contact-hero__glow--blue {
+  top: 8%;
+  right: 4%;
+  width: min(42vw, 420px);
+  height: min(42vw, 420px);
+  background: rgba(15, 124, 122, 0.32);
+}
+
+.contact-hero__glow--green {
+  bottom: 14%;
+  right: 18%;
+  width: min(28vw, 280px);
+  height: min(28vw, 280px);
+  background: rgba(79, 125, 72, 0.24);
+}
+
+.contact-hero__glow--blue-left {
+  top: 22%;
+  left: -6%;
+  width: min(38vw, 380px);
+  height: min(38vw, 380px);
+  background: rgba(15, 124, 122, 0.26);
+}
+
+.contact-hero__glow--green-left {
+  bottom: 12%;
+  left: 4%;
+  width: min(32vw, 300px);
+  height: min(32vw, 300px);
+  background: rgba(79, 125, 72, 0.28);
+}
+
+.contact-hero__photo {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  width: min(70%, 820px);
+  padding-top: 5.5rem;
+  pointer-events: none;
+  -webkit-mask-image:
+    linear-gradient(180deg, transparent 0%, transparent 5.5rem, #000 7.5rem),
+    linear-gradient(90deg, transparent 0%, rgba(0, 0, 0, 0.5) 10%, #000 28%);
+  mask-image:
+    linear-gradient(180deg, transparent 0%, transparent 5.5rem, #000 7.5rem),
+    linear-gradient(90deg, transparent 0%, rgba(0, 0, 0, 0.5) 10%, #000 28%);
+  -webkit-mask-composite: source-in;
+  mask-composite: intersect;
+}
+
+.contact-hero__photo-fade {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      180deg,
+      #0b1615 0%,
+      rgba(11, 22, 21, 0.85) 5.5rem,
+      transparent 9rem
+    ),
+    linear-gradient(
+      90deg,
+      rgba(11, 22, 21, 0.75) 0%,
+      rgba(11, 22, 21, 0.22) 28%,
+      transparent 55%
+    );
+}
+
+@media (max-width: 1023px) {
+  .contact-hero__photo {
+    display: none;
+  }
+}
