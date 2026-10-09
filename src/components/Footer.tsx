@@ -36,7 +36,7 @@ export function Footer() {
           <div className="max-w-[280px]">
             <Image
               src="/images/logo nav white.svg"
-              alt="AmeriList CBD Marketing List"
+              alt="AmeriList CBD Mail List"
               width={168}
               height={35}
               className="h-8 w-auto"
