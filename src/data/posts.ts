@@ -211,7 +211,7 @@ export const posts: Post[] = [
     slug: "reaching-wellness-consumers-with-direct-mail",
     category: "Direct Mail",
     title: "Reaching Wellness Consumers With Direct Mail",
-    image: "/images/crystalweed-cannabis-_gtictneYMg-unsplash.jpg",
+    image: "/images/honest-paws-Cm_O7FBrdhQ-unsplash.jpg",
     excerpt:
       "Direct mail is one of the few channels where CBD brands can tell their full story without platform restrictions. Paired with accurate audience data, it turns curious wellness shoppers into loyal customers.",
     content: [

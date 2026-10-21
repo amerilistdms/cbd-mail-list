@@ -33,10 +33,10 @@ export function Audiences() {
       <div data-reveal className="mx-auto grid w-full max-w-[1120px] items-center gap-10 px-5 py-16 md:px-10 md:py-24 lg:grid-cols-[minmax(0,0.92fr)_minmax(0,1.08fr)] lg:gap-16">
         <figure data-reveal-child className="relative aspect-[3/2] overflow-hidden rounded-[28px] bg-[#d7e0d6]">
           <Image
-            src="/images/honest-paws-Cm_O7FBrdhQ-unsplash.jpg"
-            alt="A person offering a wellness dropper while a dog watches"
+            src="/images/crystalweed-cannabis-_gtictneYMg-unsplash.jpg"
+            alt="A woman checking a bottle of CBD oil"
             fill
-            className="object-cover object-[center_42%]"
+            className="object-cover object-center"
             sizes="(max-width: 1024px) 100vw, 520px"
           />
         </figure>
